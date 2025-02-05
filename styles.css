@@ -1,0 +1,280 @@
+/* header {
+    background: #E91E63;
+    padding: 0px 10px;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+.container img {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+} */
+
+/* General Styles */
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ======= ELEGANT BACKGROUND GRADIENT ======= */
+body {
+    background: linear-gradient(135deg, #C9A7E4, #FAD0C4);
+    /* Soft Purple to Peach */
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* ======= CONTAINER WITH SUBTLE GRADIENT ======= */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent white */
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ======= Modern Header with Gradient ======= */
+header {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======= IMAGE CARDS WITH HARMONIOUS COLORS ======= */
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent white for smooth look */
+    backdrop-filter: blur(10px);
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+/* Hover effect */
+.image-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    border: 2px solid #7EB5B5;
+    /* Subtle soft blue border */
+}
+
+/* Image styling */
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ======= DOWNLOAD BUTTON WITH MUTED GOLD GLOW ======= */
+.download-btn {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Button Appears with Subtle Gold Glow */
+.image-card:hover .download-btn {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Hover with Subtle Gold Neon Glow */
+.download-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #E9D8A6;
+    /* Muted Gold Glow */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* ======= NEW LOADER DESIGN WITH HIGHLIGHTED COLOR ======= */
+.loader {
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #E9D8A6;
+    /* Highlighted soft gold for a premium feel */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+    /* Smooth spin */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Smooth spinning animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ======= SMOOTH SCROLL ANIMATION ======= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ======= FLOATING SCROLL-TO-TOP BUTTON ======= */
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+#scrollToTop:hover {
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* ======= DARK MODE BACKGROUND ======= */
+body.dark-mode {
+    background: linear-gradient(135deg, #333, #555);
+    /* Muted dark theme */
+    color: white;
+}
+
+.container.dark-mode {
+    background: rgba(255, 255, 255, 0.1);
+    /* Transparent for smooth transition */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.image-card.dark-mode {
+    background: rgba(0, 0, 0, 0.3);
+    /* Darker card background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.download-btn.dark-mode {
+    background: rgba(0, 0, 0, 0.7);
+    /* Darker background */
+    color: white;
+    border: 2px solid #7EB5B5;
+    /* Soft blue border */
+}
+
+#scrollToTop.dark-mode {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Toggle Button hover effect */
+#darkModeToggle:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Center loader correctly over the screen */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Slight transparent background to highlight loader */
+    z-index: 9999;
+}
